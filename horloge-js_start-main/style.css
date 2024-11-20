@@ -12,17 +12,22 @@
 }
 
 .aurore {
+    background: #B875C7;
 }
 
 .matin {
+    background: #6dabe4;
 }
 
-.apres-midi {   
+.apres-midi {
+    background: rgb(55, 123, 206);   
 }
 
 .soiree {
+    background: rgb(238, 30, 62);
 }
 
 .nuit {
+    background: rgb(3, 3, 45);
 }
 

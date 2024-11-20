@@ -18,7 +18,12 @@ function changeStyleBasedOnTime() {
        //* Entre 18h et 5h, on affiche "Bonsoir !" en injectant du code dans l'id say-hi avec le code suivant :
         //* -> sayHi.textContent = 'Bonsoir !';
         //* la variable currentHour contient l'heure actuelle
-
+        if (currentHour >=5 && currentHour < 18) {
+            sayHi.textContent = 'Bonjour !';
+        }
+        else if (currentHour >= 18 && currentHour < 5) {
+            sayHi.textContent = 'Bonsoir !';
+        } 
 
 
     //**! /!\ Ne pas toucher /!\ 
@@ -43,8 +48,24 @@ function changeStyleBasedOnTime() {
             //* Après-midi : 12h-18h
             //* Soirée : 18h-22h
             //* Nuit : 22h-5h
-
+            if (currentHour >= 5 && currentHour < 8) {
+                element.classList.add('aurore');
+            } 
+            else if(currentHour >= 8 && currentHour < 12){
+                element.classList.add('matin');
+            }
+            else if(currentHour >= 12 && currentHour < 18){
+                element.classList.add('apres-midi');
+            }
+            else if(currentHour >= 18 && currentHour < 22){
+                element.classList.add('soiree');
+            }
+            else if(currentHour >= 22 && currentHour < 5){
+                element.classList.add('nuit');
+            }
 } // Fin de la première fonction
+
+
 
 //**! /!\ Ne pas toucher /!\
 //**! /!\ DÉBUT /!\
